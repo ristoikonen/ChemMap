@@ -60,6 +60,7 @@ function useMap(formula) {
 
 }
 
+// Fill form from Map
 function fillFromMap(fillMap) {
     console.log('fillFromMap -function');
 
