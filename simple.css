@@ -17,3 +17,17 @@ button.green {
 button.red {
    background-color: orangered;
 }
+
+.icon {
+  height: 50px;
+  margin-right: 10px;
+}
+
+div[id^="download"] {
+  display: none;
+}
+
+div[id^="formulaError"] {
+    display: none;
+}
+

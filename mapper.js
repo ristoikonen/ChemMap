@@ -11,8 +11,8 @@ function useMap(formula) {
     }
 
     const map1 = new Map();
-    //let s1 = 'C8Cl23P333'
-    let s1 = formula; //'Ca8Na16O2P4'
+    //let s1 = 'C8Cl23P333' //'Ca8Na16O2P4'
+    let s1 = formula; 
     let n = 0;
     let count = 0;
     //split letters and numbers
@@ -44,7 +44,7 @@ function useMap(formula) {
     */
 
     map1.forEach((value, key) => {
-    console.log(key + '=' + value, );
+        console.log(key + '=' + value, );
     });
 
 
@@ -56,6 +56,26 @@ function useMap(formula) {
         console.log('map1.has Cl as ' + map1.get('Cl'));
     }
 
+    fillFromMap(map1);
+
+}
+
+function fillFromMap(fillMap) {
+    console.log('fillFromMap -function');
+
+    console.log(document.getElementById('O').value);
+    
+
+    if(fillMap instanceof Map)
+    {
+        fillMap.forEach((value, key) => {
+            console.log(key + '=' + value, );
+            if(document.getElementById(key) !== null )
+            {
+                document.getElementById(key).value = value;
+            }
+        });
+    }
 }
 
 

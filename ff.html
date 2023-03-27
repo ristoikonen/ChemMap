@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="mapper.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            //$('#formulaError').fadeIn();
+
+            // Get value on button click and show alert
+            $("#btmMapFormula").click(function(){
+                console.log('click');
+                var str = $("#inputFormula").val();
+                console.log(str);
+                useMap(str);
+
+                //$('#formulaError').fadeIn();
+                //alert($('#downloadA').val());
+            });
+
+         
+      });
+
+    </script>
+
+
+    <link rel="stylesheet" href="simple.css">
+    <title>Formula Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+  </head>
+
+
+  <body>
+
+
+    <div class="card">
+      <div class="card-header">
+        Formulas
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">Separate formula into atoms</h5>
+        <p class="card-text">Then calculate values....</p>
+
+        <div class="container">
+
+          <form class="row g-3" id="formulaForm" onsubmit="return false;">
+              <div class="col-md-12">
+                <label for="inputFormula" class="form-label">Formula</label>
+                <input type="text" class="form-control" id="inputFormula">
+              </div>
+      
+              <div class="col-md-2">
+                <label for="Cl" class="form-label">Cl</label>
+                <input type="text" class="form-control" id="Cl">
+              </div>
+              <div class="col-md-2">
+                <label for="H" class="form-label">H</label>
+                <input type="text" class="form-control" id="H">
+              </div>
+              <div class="col-md-2">
+                <label for="S" class="form-label">S</label>
+                <input type="text" class="form-control" id="S">
+              </div>
+      
+              
+              <div class="col-md-2">
+                <label for="C" class="form-label">C</label>
+                <input type="text" class="form-control" id="C">
+              </div>
+              <div class="col-md-2">
+                <label for="O" class="form-label">O</label>
+                <input type="text" class="form-control" id="O">
+              </div>
+              <div class="col-md-2">
+                <label for="Na" class="form-label">Na</label>
+                <input type="text" class="form-control" id="Na">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button  class="btn btn-primary" id="btmMapFormula">Map Formula</button>
+                <!-- type="submit" -->
+              </div>
+      
+              <div class="panel panel-primary" id="formulaError">
+                  <div class="panel-heading">Formula Error</div>
+                  <div class="panel-body">
+                     There's error in formula
+                  </div>
+                </div>
+      
+            </form>
+          </div>
+
+
+
+
+      </div>
+    </div>
+
+
+
+
+  </body>
+</html>
