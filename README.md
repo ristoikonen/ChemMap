@@ -1,4 +1,5 @@
 # ChemMap
 
 ## Parser for chemical formulas 
-## Bootstrap 5 forms -  atoms and their numbers.
+### Bootstrap 5 forms for  atoms and their numbers.
+### Use of jQuery and LiveServer 
