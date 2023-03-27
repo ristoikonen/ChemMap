@@ -3,6 +3,12 @@
 
 function useMap(formula) {
     console.log('useMap -function');
+    console.log(formula);
+
+    if( formula.length < 1 ) {
+        console.log('No input');
+        return;
+    }
 
     const map1 = new Map();
     //let s1 = 'C8Cl23P333'

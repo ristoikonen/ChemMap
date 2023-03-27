@@ -16,8 +16,9 @@
 $(document).ready(function () {
         $("button").click(function () {
           $("h2").html("Goodbye</b>");
+          var chemformula = $('#formulain').val();
           //initMap();
-          useMap('Ca8Na16O2P4');
+          useMap(chemformula);
           
         });
       });
@@ -30,9 +31,14 @@ $(document).ready(function () {
 
     <button>Click Buttons</button>
 
+    <form>
+        <label for="formulain">Chemical Formula:</label><br>
+        <input type="text" id="formulain" name="formulain">
+    </form>
+
     <div>
-        <p class="pname">freeCodeCamp</p>
-        <button onclick="changeColor()">Change to Blue</button>
+        <p class="pname">DEBUG</p>
+        <button onclick="useMap(document.getElementById('formulain').value)">Test Functionality</button>
       </div>
 
 
