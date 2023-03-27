@@ -1,5 +1,5 @@
 
-
+/* Common functions placeholder */
 
     $(document).ready(function () {
         $("button").click(function () {
